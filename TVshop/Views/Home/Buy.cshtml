@@ -1,0 +1,25 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+    <div>
+        <form method="post" action="">
+            <input type="hidden" value="@ViewBag.TvId" name="TvId" />
+            <table>
+                <tr>
+                    <td><p>Введите своё имя</p></td>
+                    <td><input type="text" name="Person" /></td>
+                </tr>
+                <tr>
+                    <td><p>Введите адрес</p></td>
+                    <td><input type="text" name="Adress" /></td>
+                </tr>
+            </table>
+            <input type="submit" name="Отправить" />
+        </form>
+    </div>
+
+

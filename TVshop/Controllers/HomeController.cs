@@ -3,28 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TVshop.Models;
 
 namespace TVshop.Controllers
 {
     public class HomeController : Controller
     {
+        TvContext db = new TvContext();
         public ActionResult Index()
         {
+            IEnumerable < Tvshop > tvs = db.TvShops;
+            ViewBag.Tvs = tvs;
             return View();
         }
-
-        public ActionResult About()
+        [HttpGet]
+        public ActionResult Buy(int id)
         {
-            ViewBag.Message = "Your application description page.";
-
+            ViewBag.TvId = id;
             return View();
         }
-
-        public ActionResult Contact()
+        [HttpPost]
+        public string Buy(Purchase purchase)
         {
-            ViewBag.Message = "Your contact page.";
+            purchase.Date = DateTime.Now;
+            db.Purchases.Add(purchase);
+            db.SaveChanges();
+            return "Спасибо,"  + purchase.Person + ",за покупку";
 
-            return View();
         }
+
+        
+
+        
     }
 }
