@@ -1,7 +1,25 @@
 ﻿@{
-    ViewBag.Title = "About";
+	ViewBag.Title = "About";
 }
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
 
 <p>Use this area to provide additional information.</p>
+<p>
+	<br /><br />
+	хелпер Html.Partial:
+	@Html.Partial("Show")
+	<br /><br />
+	@Html.Partial("PartialBlock", new string[] { "Belarus", "Canada", "USA" })
+	@{
+
+		string[] cities = new string[] { "Барселона", "Минск", "Брест" };
+		string[] oceans = new string[] { "Тихий океан", "Индийский океан", "Атлантический океан" };
+		string[] matericas = new string[] { "Австралия ", "Северная Америка", "Южная Америка" };
+
+	}
+	@Html.Partial("PartialBlock", cities);
+	@Html.Partial("PartialBlock", oceans);
+	@Html.Partial("PartialBlock", matericas);
+
+</p>

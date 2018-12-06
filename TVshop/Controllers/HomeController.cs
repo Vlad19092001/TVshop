@@ -31,9 +31,21 @@ namespace TVshop.Controllers
             return "Спасибо,"  + purchase.Person + ",за покупку";
 
         }
+        public ActionResult Show()
+        {
+            ViewBag.Message = "Сообщение";
+            return PartialView();
+        }
+        public ActionResult About()
+        {
+            ViewBag.Message = "Сообщение About";
+            return PartialView();
+        }
+        public ActionResult PartialBlock()
+        {
+            return PartialView();
+        }
 
-        
 
-        
     }
 }
