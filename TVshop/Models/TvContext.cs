@@ -8,5 +8,7 @@ namespace TVshop.Models
     {
         public DbSet<Tvshop> TvShops { get; set; }
         public DbSet<Purchase> Purchases { get; set; }
+        public DbSet<Client> Client { get; set; }
+        public DbSet<Bascket> Bascket { get; set; }
     }
 }

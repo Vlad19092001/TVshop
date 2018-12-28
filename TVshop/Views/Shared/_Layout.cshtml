@@ -1,17 +1,41 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <title>@ViewBag.Title</title>
-    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+	<meta charset="utf-8" />
+	<title>@ViewBag.Title</title>
+	<link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+	@*<script src="~/Scripts/JavaScript.js"></script>*@
+	<script src="http://www.fortress-design.com/js/snow-fall.js" type="text/javascript"></script>
+	<div style="height: 30px; background: url(https://uguide.ru/js/script/girlianda_uguide_ru_1.gif) repeat-x 100%;"></div>
+	<div style="position:sticky;top:0px;left:0px;width:300px;height:229px;background:url('https://uguide.ru/js/script/vetka.png')"></div>
 </head>
 <body>
+	<div class="menu">
+		
+			<ul>
+				<li>@Html.ActionLink("Главная", "Index", "Home")</li>
+				<li>@Html.ActionLink("Контакты", "Contact", "Home")</li>
+				<li>@Html.ActionLink("О нас", "About", "Home")</li>
+				<li>@Html.ActionLink("Корзина", "Index", "Home")</li>
+			</ul>
+		
+	</div>
+	<div>
+		<p>
+			@RenderBody()
+		</p>
+	</div>
+	<footer>
+		@if (IsSectionDefined("Footer"))
+		{
+			@RenderSection("Footer")
+		}
+		else
+		{
+			<div align="center"><img alt="" src="https://uguide.ru/js/script/elka_ot_uguide_ru_2.gif" width="118" height="173"></div>
+		}
 
-    <nav>
-        <ul class="menu">
-            <li>@Html.ActionLink("Главная", "Index", "Home")</li>
-        </ul>
-    </nav>
-    @RenderBody()
+		</footer>
+
 </body>
 </html>

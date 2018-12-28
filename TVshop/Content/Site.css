@@ -1,5 +1,7 @@
 ﻿body {
-    padding-top: 50px;
+	
+
+	padding-top: 50px;
     padding-bottom: 20px;
     background-color: aqua;
     font-family:Verdana;
@@ -11,27 +13,89 @@ nav {
 }
 .menu{
     padding-left:10px;
+	
 }
-    .menu ul {
-        list-style: none;
+	.menu ul {
+		list-style: none; /*убираем маркеры списка*/
+		margin: 0; /*убираем отступы*/
+		padding-left: 0; /*убираем отступы*/
+		margin-top: 25px; /*делаем отступ сверху*/
+		background: #FF4444; /*добавляем фон всему меню (заменив этот параметр, вы поменяете цвет всего меню)*/
+		height: 50px; /*задаем высоту*/
+		
     }
-    .menu li {
-        display: inline;
-    }
-    .menu a:hover{
-        color: red;
-    }
-table {
+	.menu li {
+		display: inline;
+		float: left; /*Размещаем список горизонтально для реализации меню*/
+	}
+	.menu a:hover {
+		color: red;
+		
+	}
+	.menu a {
+		text-decoration: none; 
+		background: #FF4444; 
+		padding: 0px 15px; 
+		font-family: arial; 
+		line-height: 50px;
+		display: block;
+		border-right: 1px solid #F36262; 
+	}
+
+/*table {
     vertical-align: middle;
-    text-align: center;
+    text-align: center;*/
 
 }
+table {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 14px;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+th, td:first-child {
+	background: #AFCDE7;
+	color: white;
+	padding: 10px 20px;
+}
+
+th, td {
+	border-style: solid;
+	border-width: 0 1px 1px 0;
+	border-color: white;
+}
+
+td {
+	background: #D8E6F3;
+}
+
+	th:first-child, td:first-child {
+		text-align: left;
+	}
 .header {
     font-weight:bold;
 }
-td {
-    padding-right:10px;
-}
+/*td {
+    padding-right:15px;
+}*/
 input {
-    width: 150px;
+	width: 150px;
+}
+a.nubex {
+	color: #754b4b;
+	user-select:none;
+	text-decoration:none;
+	outline:ridge;
+	background-color: #302424;
+	padding: 0.2em 0.4em;
+}
+a.nubex:active {
+	background-color:#808080;
+}
+a.nubex:hover {
+	background-color: #302424;
+}
+a, a:visited {
+	color:#0026ff;
 }

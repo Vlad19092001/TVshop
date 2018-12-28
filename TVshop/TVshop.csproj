@@ -154,12 +154,15 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\Test2Controller.cs" />
-    <Compile Include="Controllers\TestController.cs" />
-    <Compile Include="Controllers\TvController.cs" />
+    <Compile Include="Controllers\TvshopsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\PagingHelper.cs" />
+    <Compile Include="Models\Bascket.cs" />
+    <Compile Include="Models\Client.cs" />
+    <Compile Include="Models\DTO\PurchaseDTO.cs" />
+    <Compile Include="Models\PagingInfo.cs" />
     <Compile Include="Models\Purchase.cs" />
     <Compile Include="Models\TvContext.cs" />
     <Compile Include="Models\Tvshop.cs" />
@@ -181,6 +184,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\JavaScript.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
@@ -210,6 +214,11 @@
     <Content Include="Views\Home\Buy.cshtml" />
     <Content Include="Views\Home\Show.cshtml" />
     <Content Include="Views\Home\PartialBlock.cshtml" />
+    <Content Include="Views\Tvshops\Create.cshtml" />
+    <Content Include="Views\Tvshops\Delete.cshtml" />
+    <Content Include="Views\Tvshops\Details.cshtml" />
+    <Content Include="Views\Tvshops\Edit.cshtml" />
+    <Content Include="Views\Tvshops\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

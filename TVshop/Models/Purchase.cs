@@ -6,8 +6,7 @@ namespace TVshop.Models
     {
         public int PurchaseId { get; set; }
         public int TvId { get; set; }
-        public string Person { get; set; }
-        public string Adress { get; set; }
-        public DateTime Date { get; set; }
+        public int ClientId { get; set; }
+        public int BascketId { get; set; }
     }
 }

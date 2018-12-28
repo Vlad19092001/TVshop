@@ -1,29 +1,39 @@
-﻿@{
-    Layout = "~/Views/Shared/_Layout.cshtml"; 
+﻿
+@using TVshop.Helpers
+@using TVshop.Models
+
+@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-    <div> 
-        <h3><font color =#FFA07A>Welcome to shop</font></h3>
-        <table>
-            <tr>
-                <td><p>Price</p></td>
-                <td><p>Marka</p></td>
-                <td><p>Dioganal</p></td>
-                <td><p>Model</p></td>
-                <td><p>Colors</p></td>
-            </tr>
-            @foreach(var b in ViewBag.Tvs){
-                <tr>
-                    <td><p>@b.Price</p></td>
-                    <td><p>@b.Marka</p></td>
-                    <td><p>@b.Dioganal</p></td>
-                    <td><p>@b.Model</p></td>
-                    <td><p>@b.Colors</p></td>
-                    <td><p><a href="/Home/Buy/@b.Id">Купить</a></p></td>
-                </tr>
-            }
-        </table>
-    </div>
+<div>
+	<h3><font color=#FFA07A>Welcome to shop</font></h3>
+	<table>
+		<tr>
+			<td><p>Price</p></td>
+			<td><p>Marka</p></td>
+			<td><p>Dioganal</p></td>
+			<td><p>Model</p></td>
+			<td><p>Colors</p></td>
+		</tr>
+		@foreach (var b in ViewBag.Tv)
+		{
+			<tr>
+				<td><p>@b.Price</p></td>
+				<td><p>@b.Marka</p></td>
+				<td><p>@b.Dioganal</p></td>
+				<td><p>@b.Model</p></td>
+				<td><p>@b.Colors</p></td>
+				<td><p><a href="/Home/Buy/@b.Id">Купить</a></p></td>
+			</tr>
+		}
+	</table>
+</div>
+
+	<div>
+		@PagingHelper.PageLinks(Html, ViewBag.PagingInfo, (Func<int, string>)(x => Url.Action("Index", new { page = x })))
+	</div>
+
 
 
 
